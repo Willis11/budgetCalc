@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>BudgetCalc</title>
+    <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="cssFiles/budgetApp.css">
+  </head>
+  <body>
+    <div class="budget">
+      <h1 id="budget-label">Enter Budget Amount</h1>
+      <input id="budget-amount" type="number" name="" value="">
+    </div>
+    <div class="time-period">
+      <h1 id="time-period-label">Enter Time Period in Weeks</h1>
+      <input id="time-period-amount" type="number" name="" value="">
+    </div>
+    <div class="expenses">
+      <div class="expense-button-container">
+        <button id="expense-button" onclick="addExpense()" type="button" name="button">Add Expense +</button>
+      </div>
+      <div class="expense-input-container">
+        <div class="e-container">
+          <label for="Type">Type</label>
+          <input id="Type" class="Type" type="text" name="" value="" placeholder="car">
+        </div>
+        <div class="e-container">
+          <label for="Cost">Cost</label>
+          <input id="Cost" class="Cost" type="number" name="" value="">
+        </div>
+      </div>
+    </div>
+    <div class="calculate-container">
+      <button onclick="calculate()" id="calculate"type="button" name="button"><a href="results.html">Calculate</a></button>
+    </div>
+    <script src="budgetApp.js" type="text/javascript"></script>
+  </body>
+</html>
