@@ -2,23 +2,22 @@ var exPerWeekDisplay = document.getElementById('expensePerWeek');
 var exTotalDisplay = document.getElementById('totalExpense');
 var moneyLeftInBudgetDisplay = document.getElementById('moneyLeftInBudget');
 
+
+var budget = sessionStorage.getItem("Budget");
+sessionStorage.removeItem("Budget");
+var timePeriod = sessionStorage.getItem("budgetWeeks");
+sessionStorage.removeItem("budgetWeeks");
+
+
 var objectList = [];
 
 for (var i in sessionStorage) {
   objectList.push(sessionStorage[i]);
 }
 
-console.log(objectList);
-
 for(var y = 0; y < 6; y++){
   objectList.pop();
 }
-
-var budget = objectList[0];
-var timePeriod = objectList[1];
-
-objectList.shift();
-objectList.shift();
 
 var typeCostList = [];
 
@@ -36,9 +35,6 @@ for (var z in typeCostList){
   typeList.push(type);
   costList.push(cost);
 }
-
-console.log(typeList);
-console.log(costList);
 
 var totalPerWeek = 0;
 for (var f in costList){
